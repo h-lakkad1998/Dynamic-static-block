@@ -1,0 +1,22 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-the-first-block {
+	border: 1px solid cyan;
+}
+.wp-block-create-block-the-first-block .components-button-group{
+	display: block; 
+	width: 100%;
+}
+.wp-block-create-block-the-first-block .components-button-group.options button{
+	display: inline-block;
+	width: 50%;
+	height: 100px;
+}
+
+.block-editor__container img { 
+	height: revert-layer;
+}

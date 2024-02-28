@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/the-first-block",
+  "version": "0.1.0",
+  "title": "The First Block",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "supports": {
+    "html": true,
+    "color": {},
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "the-first-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "attributes": {
+    "block_type": {
+      "type": "string",
+      "default": "static"
+    },
+    "static_posts": {
+      "type": "array",
+      "source": "query",
+      "selector": ".static-post-item",
+      "default": [],
+      "query": {
+        "mediaId": {
+          "type": "number",
+          "source": "attribute",
+          "attribute": "data-id",
+          "selector": "img"
+        },
+        "mediaURL": {
+          "type": "string",
+          "source": "attribute",
+          "attribute": "src",
+          "selector": "img"
+        },
+        "postText": {
+          "type": "string",
+          "source": "attribute",
+          "attribute": "data-text",
+          "selector": "p"
+        },
+        "postLink": {
+          "type": "string",
+          "source": "attribute",
+          "attribute": "data-link",
+          "selector": "a"
+        }
+      }
+    },
+    "posts_cat": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "style": "file:./style-index.css"
+}
